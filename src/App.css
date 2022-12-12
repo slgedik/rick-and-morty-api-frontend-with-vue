@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Segoe+UI');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  width: 30%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 100px auto;
+  flex-direction: column;
+  background-color: #141227;
+  /*margin-top: 3%;*/
 }
 
-.App-link {
-  color: #61dafb;
+.imgSize {
+  height: 134px;
+  margin-top: -4px;
+}
+.btnClass {
+  background-color: #34344e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 46px;
+  border: 1px solid #34344e;
+  border-radius: 8px;
+  padding: 8px 24px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+img {
+  /*width: 200px;
+  height: 200px;
+  border-radius: 10px;*/
+}
+.header {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  /*width: 1921px;
+  height: 100px;*/
+  left: 0px;
+  top: 0px;
+  background-color: #23233f;
+}
+.logoStyle {
+  /* position: absolute;
+  left: 43.99%;
+  right: 44.08%;
+  top: 15%;
+  bottom: 15%;*/
+  /*text-align: center;
+   padding-top: 10px;*/
+}
+.nameFont {
+  /*position: absolute;*/
+  /* width: 122px;*/
+  top: 150px;
+
+  font-family: 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b2b4d7;
+}
+.dataContainer {
+  /*width: 1024px;*/
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  /*align-items: flex-start;*/
+  padding: 0px;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));*/
+}
+
+.data {
+  width: 238px;
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: 0px;
+  background-color: #23233f;
+  /*padding-top: 20px;*/
+  /*border-radius: 10px;*/
+  letter-spacing: 1px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
+  transition: 0.3s;
+  /*flex: none;
+  order: 1;
+  flex-grow: 0;*/
+}
+
+.bodyClass {
+  width: 100%;
+  background-color: #141227;
+}
+
+.p1 {
+  font-family: 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #b2b4d7;
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
+.p2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #b2b4d7;
+  margin-left: 16px;
+}
+.data:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+button:hover {
+  background: #b2b4d7;
+  color: black;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  padding-left: 0px;
+}
+.alivePoint {
+  background-color: #b3ff38;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.deadPoint {
+  background-color: #bf0050;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.unknownPoint {
+  background-color: #b2b4d7;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 70%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    flex-direction: column;
+    background-color: #141227;
+    /*margin-top: 3%;*/
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 60%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    flex-direction: column;
+    background-color: #141227;
+    /*margin-top: 3%;*/
+  }
+}
+
+@media (max-width: 500) {
+  .container {
+    width: 350px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    flex-direction: column;
+    background-color: #141227;
+    /*margin-top: 3%;*/
   }
 }
